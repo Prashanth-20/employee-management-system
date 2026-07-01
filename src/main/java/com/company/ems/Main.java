@@ -1,9 +1,10 @@
- package com.company.ems;
+//main method to start the application
 
- public class Main {
+package com.company.ems;
 
-     public static void main(String[] args) {
-         System.out.println("Employee Management System Started");
-     }
+public class Main {
 
- }
+    public static void main(String[] args) {
+        System.out.println("Employee Management System Started");
+    }
+}
