@@ -1,9 +1,9 @@
-package com.company.ems;
+ package com.company.ems;
 
-public class Main {
+ public class Main {
 
-    public static void main(String[] args) {
-        System.out.println("Employee Management System Started");
-    }
+     public static void main(String[] args) {
+         System.out.println("Employee Management System Started");
+     }
 
-}
+ }
