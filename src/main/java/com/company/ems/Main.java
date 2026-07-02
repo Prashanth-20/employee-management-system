@@ -1,5 +1,3 @@
-//main method to start the application
-
 package com.company.ems;
 
 public class Main {
