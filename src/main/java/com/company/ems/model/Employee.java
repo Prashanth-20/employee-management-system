@@ -1,20 +1,20 @@
 package com.company.ems.model;
 
 public class Employee{
-    private long id;
+    private Long id;
     private String name;
-    private double salary;
+    private Double salary;
     private String designation;
     private String department;
     private String joiningDate;
     private String email;
     private String phoneNumber;
-    private boolean isActive;
+    private Boolean isActive;
 
     public Employee() {
     }
 
-    public Employee(long id, String name, double salary, String designation, String department, String joiningDate, String email, String phoneNumber, boolean isActive) {
+    public Employee(Long id, String name, Double salary, String designation, String department, String joiningDate, String email, String phoneNumber, Boolean isActive) {
         this.id = id;
         this.name = name;
         this.salary = salary;
@@ -26,7 +26,7 @@ public class Employee{
         this.isActive = isActive;
     }
 
-    public long getId(){
+    public Long getId(){
         return id;
     }
 
@@ -34,7 +34,7 @@ public class Employee{
         return name;
     }
 
-    public double getSalary(){
+    public Double getSalary(){
         return salary;
     }
 
@@ -58,11 +58,11 @@ public class Employee{
         return joiningDate;
     }
 
-    public boolean isActive(){
+    public Boolean isActive(){
         return isActive;
     }
 
-    public void setSalary(double salary){
+    public void setSalary(Double salary){
         this.salary = salary;
     }
 
@@ -82,7 +82,17 @@ public class Employee{
         this.phoneNumber = phoneNumber;
     }
 
-    public void setActive(boolean active){
+    public void setActive(Boolean active){
         isActive = active;
+    }
+
+    @Override
+    public String toString() {
+    return "Employee{" +
+            "id=" + id +
+            ", name='" + name + '\'' +
+            ", designation='" + designation + '\'' +
+            ", department='" + department + '\'' +
+            '}';
     }
 }
