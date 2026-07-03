@@ -9,4 +9,8 @@ public class EmployeeRepository {
     public void save(Employee employee) {
         employees.add(employee);
     }
+
+    public ArrayList<Employee> findAll(){
+        return employees;
+    }
 }

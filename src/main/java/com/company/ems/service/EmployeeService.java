@@ -2,10 +2,11 @@ package com.company.ems.service;
 
 import com.company.ems.repository.EmployeeRepository;
 import com.company.ems.model.Employee;
+import java.util.List;
 
 public class EmployeeService {
 
-    EmployeeRepository employeeRepository = new EmployeeRepository();
+    private EmployeeRepository employeeRepository = new EmployeeRepository();
     public void addEmployee(Employee employee) {
         if(employee != null) {
             employeeRepository.save(employee);
@@ -14,5 +15,8 @@ public class EmployeeService {
         else {
             System.out.println("Invalid employee data. Employee not added.");
         }
+    }
+    public List<Employee> getAllEmployees() {
+        return employeeRepository.findAll();
     }
 }
