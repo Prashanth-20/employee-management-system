@@ -28,6 +28,9 @@ public class EmployeeService {
             existingEmployee.setEmail(updatedEmployee.getEmail());
             existingEmployee.setDesignation(updatedEmployee.getDesignation());
             existingEmployee.setSalary(updatedEmployee.getSalary());
+            existingEmployee.setActive(updatedEmployee.isActive());
+            existingEmployee.setPhoneNumber(updatedEmployee.getPhoneNumber());
+            existingEmployee.setDepartment(updatedEmployee.getDepartment());
             return existingEmployee;
         }
         return null;
