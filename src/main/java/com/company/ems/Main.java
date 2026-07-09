@@ -15,6 +15,12 @@ public class Main {
        employeeService.addEmployee(employee2);
        employeeService.addEmployee(employee3);
        List<Employee> employees = employeeService.getAllEmployees();
+       Employee searchedEmployee  = employeeService.getEmployeeById(2L);
+       if(searchedEmployee != null){
+            System.out.println("Employee found: " + searchedEmployee);
+       } else {
+            System.out.println("Employee not found.");
+       }
        for(Employee employee : employees){
             System.out.println("Employee: " + employee);
        }
