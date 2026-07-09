@@ -24,5 +24,13 @@ public class Main {
        for(Employee employee : employees){
             System.out.println("Employee: " + employee);
        }
+       Employee updatedEmployee = new Employee(2L, "Jane Smith Kumar", 65000.0, "Senior Product Manager", "IT", "2022-05-10", "jane.smith.updated@company.com", "098-765-4321", true);
+       System.out.println("Before Employee updated: " + updatedEmployee);
+       updatedEmployee = employeeService.updateEmployee(updatedEmployee);
+       if(updatedEmployee != null){
+            System.out.println("After Employee updated: " + updatedEmployee);
+       } else {
+            System.out.println("Failed to update employee.");
+       }
     }
 }
