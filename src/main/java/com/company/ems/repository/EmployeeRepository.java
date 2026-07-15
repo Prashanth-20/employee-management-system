@@ -22,8 +22,8 @@ public class EmployeeRepository {
         }
         return null;    
     }
-    
-    public void deleteById(Employee deleteEmployee){
+
+    public void delete(Employee deleteEmployee){
         employees.remove(deleteEmployee);
     }
 }

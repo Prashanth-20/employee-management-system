@@ -35,12 +35,12 @@ public class EmployeeService {
         }
         return null;
     }
-    public String deleteEmployee(Long id){
+    public Employee deleteEmployee(Long id){
         Employee employeeToDelete = employeeRepository.findById(id);
         if(employeeToDelete != null){
             employeeRepository.deleteById(employeeToDelete);
-            return "Employee deleted successfully.";
+            return employeeToDelete;
         }
-        return "Failed to delete employee.";
+        return null;
     }
 }

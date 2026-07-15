@@ -32,7 +32,11 @@ public class Main {
        } else {
             System.out.println("Failed to update employee.");
        }
-       String deletedEmployee =  employeeService.deleteEmployee(1L);
-       System.out.println(deletedEmployee);
+       Employee deletedEmployee =  employeeService.deleteEmployee(1L);
+       if(deletedEmployee != null){
+            System.out.println("Deleted Employee" );
+       } else {
+            System.out.println("Failed to delete employee.");
+       }
     }
 }
