@@ -22,7 +22,7 @@ public class EmployeeService {
     public Employee getEmployeeById(Long id){
         return employeeRepository.findById(id);
     }
-     public Employee updateEmployee(Employee updatedEmployee){
+    public Employee updateEmployee(Employee updatedEmployee){
         Employee existingEmployee = employeeRepository.findById(updatedEmployee.getId());
         if(existingEmployee != null){
             existingEmployee.setEmail(updatedEmployee.getEmail());
@@ -34,5 +34,13 @@ public class EmployeeService {
             return existingEmployee;
         }
         return null;
-     }
+    }
+    public String deleteEmployee(Long id){
+        Employee employeeToDelete = employeeRepository.findById(id);
+        if(employeeToDelete != null){
+            employeeRepository.deleteById(employeeToDelete);
+            return "Employee deleted successfully.";
+        }
+        return "Failed to delete employee.";
+    }
 }
